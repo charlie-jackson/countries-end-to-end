@@ -25,17 +25,18 @@ VALUES
 
 
 
-  CREATE TABLE food (
-    food_id INT GENERATED ALWAYS AS IDENTITY,
-    name VARCHAR(100) NOT NULL,
-    origin VARCHAR(100),
-    PRIMARY KEY (food_id)
-  );
+CREATE TABLE food (
+  food_id INT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(100) NOT NULL,
+  origin VARCHAR(100),
+  PRIMARY KEY (food_id)
+);
 
-  INSERT INTO food (name, origin)
-  VALUES
-    ('Moqueca', 'Brazil'),
-    ('Enchiladas', 'Mexico'),
-    ('Crispy Chill Beef', 'China'),
-    ('Ramen', 'Japan'),
-    ('Bobotie', 'South Africa');
+INSERT INTO food (name, origin)
+VALUES
+  ('Moqueca', 'Brazil'),
+  ('Enchiladas', 'Mexico'),
+  ('Crispy Chill Beef', 'China'),
+  ('Ramen', 'Japan'),
+  ('Bobotie', 'South Africa');
+

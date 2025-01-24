@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS country;
+DROP TABLE IF EXISTS country, food;
 
 CREATE TABLE country (
     country_id INT GENERATED ALWAYS AS IDENTITY,
@@ -22,3 +22,20 @@ VALUES
   ('Japan', 'Tokyo', 126860301, 'Japanese', 'Japan is home to the world''s largest fish market, Tsukiji Market.', 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png'),
   ('South Africa', 'Pretoria', 57779622, 'Afrikaans, English, Zulu, Xhosa, and others', 'South Africa has 11 official languages.', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/1200px-Flag_of_South_Africa.svg.png'),
   ('Australia', 'Canberra', 24982688, 'English', 'Australia is the only country that is also a continent.', 'https://upload.wikimedia.org/wikipedia/en/thumb/8/88/Flag_of_Australia.svg/1200px-Flag_of_Australia.svg.png');
+
+
+
+  CREATE TABLE food (
+    food_id INT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100) NOT NULL,
+    origin VARCHAR(100),
+    PRIMARY KEY (food_id)
+  );
+
+  INSERT INTO food (name, origin)
+  VALUES
+    ('Moqueca', 'Brazil'),
+    ('Enchiladas', 'Mexico'),
+    ('Crispy Chill Beef', 'China'),
+    ('Ramen', 'Japan'),
+    ('Bobotie', 'South Africa');
